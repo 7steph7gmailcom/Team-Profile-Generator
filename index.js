@@ -150,7 +150,7 @@ function addNewEmployee() {
             engineerData.github
           );
           console.log(newEngineer);
-          teamArray.push(newEngineer);
+          teamProfileArray.push(newEngineer);
           console.log(teamArray);
           finishQuestionPrompt();
         });
@@ -165,7 +165,7 @@ function addNewEmployee() {
             internData.school
           );
           console.log(newIntern);
-          teamArray.push(newIntern);
+          teamProfileArray.push(newIntern);
           console.log(teamArray);
           finishQuestionPrompt();
         });
