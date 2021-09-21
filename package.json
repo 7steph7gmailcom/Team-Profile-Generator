@@ -1,0 +1,31 @@
+{
+  "name": "Team-Profile-Generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "validator": "^13.6.0",
+    "inquirer": "^8.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7steph7gmailcom/Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7steph7gmailcom/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/7steph7gmailcom/Team-Profile-Generator#readme"
+}
