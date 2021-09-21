@@ -4,18 +4,11 @@
   "description": "",
   "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "test": "tests"
   },
   "scripts": {
-    "start": "node index.js",
     "test": "jest"
-  },
-  "devDependencies": {
-    "jest": "^24.9.0"
-  },
-  "dependencies": {
-    "validator": "^13.6.0",
-    "inquirer": "^8.1.2"
   },
   "repository": {
     "type": "git",
@@ -27,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/7steph7gmailcom/Team-Profile-Generator/issues"
   },
-  "homepage": "https://github.com/7steph7gmailcom/Team-Profile-Generator#readme"
+  "homepage": "https://github.com/7steph7gmailcom/Team-Profile-Generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
 }

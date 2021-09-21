@@ -1,0 +1,13 @@
+* body {
+    box-sizing: border-box;
+    background-color: lightgray;
+  }
+  
+  .title {
+    color: white;
+    font-weight: 650;
+    font-size: 100px;
+    text-align: center;
+    padding: 15px;
+    background-color: rgb(31, 33, 150);
+  }

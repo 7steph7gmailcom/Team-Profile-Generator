@@ -71,22 +71,19 @@ let spec;
 //Final question awnser is "No", then HTML is generated 
 function questionPrompt() {
   inquirer.prompt(questionPrompt).then((answer) => {
-    // console.log(teamArray);
+    console.log(teamProfileArray);
     if (answer.questionPrompt === "No") {
       setHtmlTemplate();
-      // generate html function should go here
-      teamArray.map((result) => {
+      //Gene HTML  
+      teamProfileArray.map((result) => {
         console.log(result);
 
 
         if (result.getRole() === "Manager") {
-          // setHtmlTemplate();
           spec = `Office Number: ${result.getOfficeNumber()}`;
         } else if (result.getRole() === "Engineer") {
-            // setHtmlTemplate();
             spec = `GitHub: <a href="${result.getGitHub()}">${result.getGitHub()}</a>`;
           } else {
-            // setHtmlTemplate();
             spec = `School: ${result.getSchool()}`;
           }
           generatedHTML += `
@@ -152,7 +149,7 @@ function addNewEmployee() {
           console.log(newEngineer);
           teamProfileArray.push(newEngineer);
           console.log(teamArray);
-          finishQuestionPrompt();
+          questionPrompt();
         });
       }
       if (data.role === "Intern") {
@@ -166,8 +163,8 @@ function addNewEmployee() {
           );
           console.log(newIntern);
           teamProfileArray.push(newIntern);
-          console.log(teamArray);
-          finishQuestionPrompt();
+          console.log(teamProfileArray);
+          questionPrompt();
         });
       }
       
@@ -177,26 +174,26 @@ function addNewEmployee() {
 }
 
 function teamGenerated() {
-    const lastWords = `</div>
+    const h_t_m_l = `</div>
     </section>
     </main>
     </body>
     </html>`;
-    fs.appendFile("./dist/generated.html", lastWords, (err) =>
-    err ? console.log(err) : console.log("theEnd function working!")
+    fs.appendFile("./dist/generated.html", h_t_m_l, (err) =>
+    err ? console.log(err) : console.log("LastFunc")
     );
   }
   
-  //Sets html template for generated.html
+  //HTML template for generated.html
 function setHtmlTemplate() {
-    let firstWords = `
+    let htmlcard = `
     <!DOCTYPE html>
     <html lang="en">
     <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team Generator</title>
+    <title>Team Profile Generator</title>
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -218,13 +215,13 @@ function setHtmlTemplate() {
   </header>
   <section class="container">
   <div class="row">`
-  fs.writeFile("./dist/generated.html", firstWords, (err) => 
+  
+  
+  fs.writeFile("./dist/generated.html", htmlcard, (err) => 
   err ? console.log(err) : console.log()
   )
 }
 
 
-
-
-//starts prompt, begins entire process of making cards
+//Make new emplyee cared
 addNewEmployee();
