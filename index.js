@@ -70,13 +70,13 @@ let spec;
 
 //Final question awnser is "No", then HTML is generated 
 function questionPrompt() {
-  inquirer.prompt(questionPrompt).then((answer) => {
-    console.log(teamProfileArray);
+  inquirer.prompt(teamProfileArray).then((answer) => {
+    // console.log(teamProfileArray);
     if (answer.questionPrompt === "No") {
       setHtmlTemplate();
       //Gene HTML  
       teamProfileArray.map((result) => {
-        console.log(result);
+        // console.log(result);
 
 
         if (result.getRole() === "Manager") {
@@ -107,7 +107,7 @@ function questionPrompt() {
       
       });
       console.log(generatedHTML);
-      fs.appendFile("./dist/generated.html", generatedHTML, (err) =>
+      fs.appendFile("./dist/index.html", generatedHTML, (err) =>
         err ? console.log(err) : console.log("successful")
       );
       teamGenerated();
@@ -179,7 +179,7 @@ function teamGenerated() {
     </main>
     </body>
     </html>`;
-    fs.appendFile("./dist/generated.html", h_t_m_l, (err) =>
+    fs.appendFile("./dist/index.html", h_t_m_l, (err) =>
     err ? console.log(err) : console.log("LastFunc")
     );
   }
@@ -217,7 +217,7 @@ function setHtmlTemplate() {
   <div class="row">`
   
   
-  fs.writeFile("./dist/generated.html", htmlcard, (err) => 
+  fs.writeFile("./dist/index.html", htmlcard, (err) => 
   err ? console.log(err) : console.log()
   )
 }
