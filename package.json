@@ -1,5 +1,5 @@
 {
-  "name": "Team-Profile-Generator",
+  "name": "team-profile-generator",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,11 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "jest"
+    "test": "test",
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "jest": "27.0.6"
   },
   "repository": {
     "type": "git",
@@ -22,10 +26,6 @@
   },
   "homepage": "https://github.com/7steph7gmailcom/Team-Profile-Generator#readme",
   "dependencies": {
-    "inquirer": "^8.1.2",
-    "validator": "^13.6.0"
-  },
-  "devDependencies": {
-    "jest": "^27.0.6"
+    "inquirer": "^8.1.5"
   }
 }

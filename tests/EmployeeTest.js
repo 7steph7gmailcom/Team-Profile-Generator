@@ -15,7 +15,7 @@ Test("Can instantiate Employee instance", () => {
 
 
 Test("Can set email via constructor argument", () => {
-  const testValue = "make@test.com";
+  const testValue = "make@email.com";
   const e = new Employee("Create", 1, testValue);
   expect(e.email).toBe(testValue);
 });
@@ -36,7 +36,7 @@ Test("Can set name via constructor arguments", () => {
 
 
 Test("Can get email via getEmail()", () => {
-  const testValue = "test@test.com";
+  const testValue = "make@gmail.com";
   const e = new Employee("Create", 1, testValue);
   expect(e.getEmail()).toBe(testValue);
 });

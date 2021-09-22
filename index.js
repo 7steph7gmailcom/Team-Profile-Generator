@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
-const Manager = require("./lib/manager");
-const Engineer = require("./lib/engineer");
-const Intern = require("./lib/intern");
+const Manager = require("./lib/Manager");
+const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 const fs = require("fs");
 	
 
@@ -148,7 +148,7 @@ function addNewEmployee() {
           );
           console.log(newEngineer);
           teamProfileArray.push(newEngineer);
-          console.log(teamArray);
+          console.log(teamProfileArray);
           questionPrompt();
         });
       }
