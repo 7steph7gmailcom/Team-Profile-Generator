@@ -1,8 +1,3 @@
-// const x = "x"
-// const y = "y"
-// console.log(global)
-
-
 const inquirer = require("inquirer");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -53,7 +48,7 @@ const engineerQuestion = [
 const internQuestion = [
     {
     type: "input",
-    message: "What is the name of the school the Intern attended or attends?",
+    message: "What is the name of the school the Intern attended?",
     name: "school",
     },
 ];
