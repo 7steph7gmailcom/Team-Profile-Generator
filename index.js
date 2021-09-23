@@ -1,3 +1,8 @@
+// const x = "x"
+// const y = "y"
+// console.log(global)
+
+
 const inquirer = require("inquirer");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
@@ -53,15 +58,14 @@ const internQuestion = [
     },
 ];
 
-const finishQuestion = [
+const lastQuestion = [
     {
     type: "list",
     message: "Would you like to add another team member?",
-    name: "finishQuestion",
+    name: "lastQuestion",
     choices: ["Yes", "No"],
     },
 ];
-      
 
 const teamProfileArray = [];
 let generatedHTML = "";
@@ -69,14 +73,14 @@ let spec;
 
 
 //Final question awnser is "No", then HTML is generated 
-function questionPrompt() {
-  inquirer.prompt(teamProfileArray).then((answer) => {
-    // console.log(teamProfileArray);
-    if (answer.questionPrompt === "No") {
+function lastQuestionPrompt() {
+  inquirer.prompt(lastQuestion).then((answer) => {
+    console.log(teamProfileArray);
+    if (answer.lastQuestion === "No") {
       setHtmlTemplate();
       //Gene HTML  
       teamProfileArray.map((result) => {
-        // console.log(result);
+        console.log(result);
 
 
         if (result.getRole() === "Manager") {
@@ -134,7 +138,7 @@ function addNewEmployee() {
           );
           console.log(newManager);
           teamProfileArray.push(newManager);
-          questionPrompt();
+          lastQuestionPrompt();
         });
       }
       if (data.role === "Engineer") {
@@ -149,7 +153,7 @@ function addNewEmployee() {
           console.log(newEngineer);
           teamProfileArray.push(newEngineer);
           console.log(teamProfileArray);
-          questionPrompt();
+          lastQuestionPrompt();
         });
       }
       if (data.role === "Intern") {
@@ -164,7 +168,7 @@ function addNewEmployee() {
           console.log(newIntern);
           teamProfileArray.push(newIntern);
           console.log(teamProfileArray);
-          questionPrompt();
+          lastQuestionPrompt();
         });
       }
       
@@ -223,5 +227,5 @@ function setHtmlTemplate() {
 }
 
 
-//Make new emplyee cared
+//Make new employee card
 addNewEmployee();
