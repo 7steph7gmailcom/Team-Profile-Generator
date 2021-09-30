@@ -5,10 +5,10 @@
   "main": "index.js",
   "directories": {
     "lib": "lib",
-    "test": "tests"
+    "test": "test"
   },
   "scripts": {
-    "test": "test",
+    "test": "jest",
     "start": "node index.js"
   },
   "devDependencies": {
