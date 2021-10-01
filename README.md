@@ -8,7 +8,7 @@ This assignment was to build a command line application that allowed the user to
 
 ## Screenshot of Finished Project
 
-https://drive.google.com/file/d/1Dd_IfI5Ik5lPgq9wyHzpnu94qL9TZ47q/view?usp=sharing
+https://watch.screencastify.com/v/8znTbApicbEgNA0oaTMG
 
 
 ## Technology Used
